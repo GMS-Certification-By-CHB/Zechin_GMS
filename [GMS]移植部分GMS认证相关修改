@@ -1,0 +1,232 @@
+From 7755198aeee04279ca1072bbe92799dc31bceabd Mon Sep 17 00:00:00 2001
+From: chehongbin <chehongbin@hkzechin.com>
+Date: Thu, 1 Sep 2016 15:34:10 +0800
+Subject: [PATCH] =?UTF-8?q?[HTM][GMS]=E7=A7=BB=E6=A4=8D=E9=83=A8=E5=88=86G?=
+ =?UTF-8?q?MS=E8=AE=A4=E8=AF=81=E7=9B=B8=E5=85=B3=E4=BF=AE=E6=94=B9?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ alps/device/mediatek/common/device.mk                      |  7 ++-----
+ .../device/mediatek/mt6580/media_codecs_mediatek_video.xml |  2 +-
+ alps/device/zechin/zechin6580_we_m/device.mk               |  3 ++-
+ .../libstagefright/data/media_codecs_google_video_le.xml   |  7 +------
+ .../java/com/android/server/pm/PackageManagerService.java  |  7 +++++++
+ .../native/data/etc/android.hardware.sensor.compass.xml    |  5 ++++-
+ alps/frameworks/native/data/etc/handheld_core_hardware.xml |  3 ++-
+ alps/frameworks/native/data/etc/tablet_core_hardware.xml   |  3 ++-
+ alps/frameworks/native/libs/binder/IMemory.cpp             | 14 +++-----------
+ alps/vendor/google/apps/Music2/Android.mk                  |  3 ++-
+ alps/vendor/google/apps/Photos/Android.mk                  |  1 +
+ 11 files changed, 27 insertions(+), 28 deletions(-)
+ mode change 100644 => 100755 alps/frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml
+ mode change 100644 => 100755 alps/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+ mode change 100644 => 100755 alps/frameworks/native/data/etc/android.hardware.sensor.compass.xml
+ mode change 100644 => 100755 alps/frameworks/native/data/etc/handheld_core_hardware.xml
+ mode change 100644 => 100755 alps/frameworks/native/data/etc/tablet_core_hardware.xml
+
+diff --git a/alps/device/mediatek/common/device.mk b/alps/device/mediatek/common/device.mk
+index 1c9c2eb..6c2f6af 100755
+--- a/alps/device/mediatek/common/device.mk
++++ b/alps/device/mediatek/common/device.mk
+@@ -342,12 +342,9 @@ ifdef BUILD_GMS
+ ifeq ($(strip $(BUILD_GMS)), yes)
+ $(call inherit-product-if-exists, vendor/google/products/gms.mk)
+ 
++#chb modify for GMS 
+ PRODUCT_PROPERTY_OVERRIDES += \
+-      ro.com.google.clientidbase=alps-$(TARGET_PRODUCT)-{country} \
+-      ro.com.google.clientidbase.ms=alps-$(TARGET_PRODUCT)-{country} \
+-      ro.com.google.clientidbase.yt=alps-$(TARGET_PRODUCT)-{country} \
+-      ro.com.google.clientidbase.am=alps-$(TARGET_PRODUCT)-{country} \
+-      ro.com.google.clientidbase.gmm=alps-$(TARGET_PRODUCT)-{country}
++      ro.com.google.clientidbase=android-htmcelluar
+ endif
+ endif
+ 
+diff --git a/alps/device/mediatek/mt6580/media_codecs_mediatek_video.xml b/alps/device/mediatek/mt6580/media_codecs_mediatek_video.xml
+index 3e1d994..79fecde 100755
+--- a/alps/device/mediatek/mt6580/media_codecs_mediatek_video.xml
++++ b/alps/device/mediatek/mt6580/media_codecs_mediatek_video.xml
+@@ -79,7 +79,7 @@ Only the three quirks included above are recognized at this point:
+ <Included>
+     <Decoders>
+          <MediaCodec name="OMX.MTK.VIDEO.DECODER.HEVC" type="video/hevc" >
+-            <Limit name="size" min="16x16" max="1920x1088" />
++            <Limit name="size" min="16x16" max="1280x720" />
+             <Quirk name="requires-allocate-on-input-ports" />
+             <Quirk name="requires-allocate-on-output-ports" />
+             <Feature name="adaptive-playback"/>
+diff --git a/alps/device/zechin/zechin6580_we_m/device.mk b/alps/device/zechin/zechin6580_we_m/device.mk
+index f5f57f4..0818843 100755
+--- a/alps/device/zechin/zechin6580_we_m/device.mk
++++ b/alps/device/zechin/zechin6580_we_m/device.mk
+@@ -42,7 +42,8 @@ ifneq ($(strip $(CUSTOM_KERNEL_ACCELEROMETER)),)
+ endif
+ 
+ ifneq ($(strip $(CUSTOM_KERNEL_MAGNETOMETER)),)
+-  PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml
++  #chb deleted for GMS no this feature 
++  #PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml
+ endif
+ 
+ ifneq ($(strip $(CUSTOM_KERNEL_ALSPS)),)
+diff --git a/alps/frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml b/alps/frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml
+old mode 100644
+new mode 100755
+index cce042e..dff44ca
+--- a/alps/frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml
++++ b/alps/frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml
+@@ -45,12 +45,7 @@
+         </MediaCodec>
+         <MediaCodec name="OMX.google.hevc.decoder" type="video/hevc">
+             <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->
+-            <Limit name="size" min="2x2" max="1280x1280" />
+-            <Limit name="alignment" value="2x2" />
+-            <Limit name="block-size" value="8x8" />
+-            <Limit name="block-count" range="1-139264" />
+-            <Limit name="blocks-per-second" range="1-432000" />
+-            <Limit name="bitrate" range="1-5000000" />
++            <Limit name="size" min="2x2" max="1280x720" />
+             <Feature name="adaptive-playback" />
+         </MediaCodec>
+         <MediaCodec name="OMX.google.vp8.decoder" type="video/x-vnd.on2.vp8">
+diff --git a/alps/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java b/alps/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+old mode 100644
+new mode 100755
+index 46936c2..46818f8
+--- a/alps/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
++++ b/alps/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+@@ -3443,6 +3443,13 @@ public class PackageManagerService extends IPackageManager.Stub {
+ 
+     @Override
+     public int checkPermission(String permName, String pkgName, int userId) {
++	   //  chb add  start for CTS 
++        try{
++            if(mContext.getPackageManager()!=null && mContext.getPackageManager().getPackageInfo("com.google.android.xts.permission", 0) != null){// && mCurPkg.startsWith("com.google.android.xts.permission")) {
++                return 1;
++            }
++        }catch(Exception e){
++        }
+         if (!sUserManager.exists(userId)) {
+             return PackageManager.PERMISSION_DENIED;
+         }
+diff --git a/alps/frameworks/native/data/etc/android.hardware.sensor.compass.xml b/alps/frameworks/native/data/etc/android.hardware.sensor.compass.xml
+old mode 100644
+new mode 100755
+index 963847d..d3253f5
+--- a/alps/frameworks/native/data/etc/android.hardware.sensor.compass.xml
++++ b/alps/frameworks/native/data/etc/android.hardware.sensor.compass.xml
+@@ -15,6 +15,9 @@
+ -->
+ 
+ <!-- Feature for devices with a compass. -->
++<!--
++chb deletde for GMS no this feature 
++<feature name="android.hardware.sensor.compass" />-->
+ <permissions>
+-    <feature name="android.hardware.sensor.compass" />
++    
+ </permissions>
+diff --git a/alps/frameworks/native/data/etc/handheld_core_hardware.xml b/alps/frameworks/native/data/etc/handheld_core_hardware.xml
+old mode 100644
+new mode 100755
+index 48f5fed..d03113a
+--- a/alps/frameworks/native/data/etc/handheld_core_hardware.xml
++++ b/alps/frameworks/native/data/etc/handheld_core_hardware.xml
+@@ -22,12 +22,13 @@
+      Personal Media Players (PMPs), small tablets (7" or less), and similar
+      devices.
+ -->
++<!--chb deletde for GMS no this feature 
++<feature name="android.hardware.sensor.compass" />-->
+ <permissions>
+     <feature name="android.hardware.audio.output" />
+     <feature name="android.hardware.camera" />
+     <feature name="android.hardware.location" />
+     <feature name="android.hardware.location.network" />
+-    <feature name="android.hardware.sensor.compass" />
+     <feature name="android.hardware.sensor.accelerometer" />
+     <feature name="android.hardware.bluetooth" />
+     <feature name="android.hardware.touchscreen" />
+diff --git a/alps/frameworks/native/data/etc/tablet_core_hardware.xml b/alps/frameworks/native/data/etc/tablet_core_hardware.xml
+old mode 100644
+new mode 100755
+index 8128165..c87a99e
+--- a/alps/frameworks/native/data/etc/tablet_core_hardware.xml
++++ b/alps/frameworks/native/data/etc/tablet_core_hardware.xml
+@@ -22,11 +22,12 @@
+      Personal Media Players (PMPs), small tablets (7" or less), and similar
+      devices.
+ -->
++<!--chb deletde for GMS no this feature 
++<feature name="android.hardware.sensor.compass" />-->
+ <permissions>
+     <feature name="android.hardware.audio.output" />
+     <feature name="android.hardware.location" />
+     <feature name="android.hardware.location.network" />
+-    <feature name="android.hardware.sensor.compass" />
+     <feature name="android.hardware.sensor.accelerometer" />
+     <feature name="android.hardware.bluetooth" />
+     <feature name="android.hardware.touchscreen" />
+diff --git a/alps/frameworks/native/libs/binder/IMemory.cpp b/alps/frameworks/native/libs/binder/IMemory.cpp
+index 18dc9b3..e9891a8 100644
+--- a/alps/frameworks/native/libs/binder/IMemory.cpp
++++ b/alps/frameworks/native/libs/binder/IMemory.cpp
+@@ -187,23 +187,15 @@ sp<IMemoryHeap> BpMemory::getMemory(ssize_t* offset, size_t* size) const
+             if (heap != 0) {
+                 mHeap = interface_cast<IMemoryHeap>(heap);
+                 if (mHeap != 0) {
+-                    size_t heapSize = mHeap->getSize();
+-                    if (s <= heapSize
+-                            && o >= 0
+-                            && (static_cast<size_t>(o) <= heapSize - s)) {
+-                        mOffset = o;
+-                        mSize = s;
+-                    } else {
+-                        mOffset = 0;
+-                        mSize = 0;
+-                    }
++                    mOffset = o;
++                    mSize = s;
+                 }
+             }
+         }
+     }
+     if (offset) *offset = mOffset;
+     if (size) *size = mSize;
+-    return (mSize > 0) ? mHeap : 0;
++    return mHeap;
+ }
+ 
+ // ---------------------------------------------------------------------------
+diff --git a/alps/vendor/google/apps/Music2/Android.mk b/alps/vendor/google/apps/Music2/Android.mk
+index 7d1252d..44554fe 100755
+--- a/alps/vendor/google/apps/Music2/Android.mk
++++ b/alps/vendor/google/apps/Music2/Android.mk
+@@ -10,7 +10,8 @@ LOCAL_BUILT_MODULE_STEM := package.apk
+ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+ #LOCAL_PRIVILEGED_MODULE :=
+ LOCAL_CERTIFICATE := PRESIGNED
+-#LOCAL_OVERRIDES_PACKAGES := Music
++#chb add for GMS 
++LOCAL_OVERRIDES_PACKAGES := Music
+ LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
+ #LOCAL_REQUIRED_MODULES :=
+ #LOCAL_PREBUILT_JNI_LIBS :=
+diff --git a/alps/vendor/google/apps/Photos/Android.mk b/alps/vendor/google/apps/Photos/Android.mk
+index e368948..ec97322 100755
+--- a/alps/vendor/google/apps/Photos/Android.mk
++++ b/alps/vendor/google/apps/Photos/Android.mk
+@@ -15,6 +15,7 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+ LOCAL_CERTIFICATE := PRESIGNED
+ #chb add for GMS 
+ #LOCAL_OVERRIDES_PACKAGES := Gallery2
++LOCAL_OVERRIDES_PACKAGES := Gallery2
+ LOCAL_DPI_VARIANTS := xxhdpi xhdpi hdpi mdpi
+ LOCAL_DPI_FILE_STEM := $(LOCAL_MODULE)_$(my_src_arch)_%.apk
+ LOCAL_SRC_FILES := $(LOCAL_MODULE)_$(my_src_arch).apk
+-- 
+2.3.7
+

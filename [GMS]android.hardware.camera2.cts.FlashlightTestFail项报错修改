@@ -1,0 +1,32 @@
+From ffcc2fcc95a826492edd047308c4c18163828ba8 Mon Sep 17 00:00:00 2001
+From: liangjianqiu <liangjianqiu@hkzechin.com>
+Date: Tue, 16 Aug 2016 14:43:25 +0800
+Subject: [PATCH] =?UTF-8?q?[Azumi][GMS]android.hardware.camera2.cts.Flashl?=
+ =?UTF-8?q?ightTest=20Fail=E9=A1=B9=E6=8A=A5=E9=94=99=E4=BF=AE=E6=94=B9?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ .../hal/imgsensor_metadata/common/config_static_metadata_common.h       | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ mode change 100644 => 100755 alps/vendor/mediatek/proprietary/custom/mt6580/hal/imgsensor_metadata/common/config_static_metadata_common.h
+
+diff --git a/alps/vendor/mediatek/proprietary/custom/mt6580/hal/imgsensor_metadata/common/config_static_metadata_common.h b/alps/vendor/mediatek/proprietary/custom/mt6580/hal/imgsensor_metadata/common/config_static_metadata_common.h
+old mode 100644
+new mode 100755
+index 73f1efb..682587a
+--- a/alps/vendor/mediatek/proprietary/custom/mt6580/hal/imgsensor_metadata/common/config_static_metadata_common.h
++++ b/alps/vendor/mediatek/proprietary/custom/mt6580/hal/imgsensor_metadata/common/config_static_metadata_common.h
+@@ -102,7 +102,7 @@ STATIC_METADATA_BEGIN(DEVICE, CAMERA, COMMON)
+         CONFIG_METADATA_END()
+         //======================================================================
+         CONFIG_METADATA_BEGIN(MTK_FLASH_INFO_AVAILABLE)
+-            CONFIG_ENTRY_VALUE(MTK_FLASH_INFO_AVAILABLE_FALSE, MUINT8)
++            CONFIG_ENTRY_VALUE(MTK_FLASH_INFO_AVAILABLE_TRUE, MUINT8)
+         CONFIG_METADATA_END()
+         //======================================================================
+         break;
+-- 
+2.3.7
+

@@ -1,0 +1,359 @@
+From 5de14ccac7097c835f82a4313cf9552a8842a882 Mon Sep 17 00:00:00 2001
+From: chehongbin <chehongbin@hkzechin.com>
+Date: Wed, 23 Mar 2016 11:29:24 +0800
+Subject: [PATCH] =?UTF-8?q?[AG][GMS]=E6=89=93=E5=BC=80MTK=5FSIGNATURE=5FCU?=
+ =?UTF-8?q?STOMIZATION,=E4=BD=BF=E7=94=A8release=20key?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ .../common/security/zechin6580_we_m/media.pk8      | Bin 0 -> 1217 bytes
+ .../common/security/zechin6580_we_m/media.x509.pem |  23 +++++++++++++++++++++
+ .../common/security/zechin6580_we_m/platform.pk8   | Bin 0 -> 1216 bytes
+ .../security/zechin6580_we_m/platform.x509.pem     |  23 +++++++++++++++++++++
+ .../common/security/zechin6580_we_m/releasekey.pk8 | Bin 0 -> 1219 bytes
+ .../security/zechin6580_we_m/releasekey.x509.pem   |  23 +++++++++++++++++++++
+ .../common/security/zechin6580_we_m/shared.pk8     | Bin 0 -> 1216 bytes
+ .../security/zechin6580_we_m/shared.x509.pem       |  23 +++++++++++++++++++++
+ .../common/security/zechin6580_we_m/testkey.pk8    | Bin 0 -> 1217 bytes
+ .../security/zechin6580_we_m/testkey.x509.pem      |  23 +++++++++++++++++++++
+ .../device/zechin/zechin6580_we_m/ProjectConfig.mk |   2 +-
+ 11 files changed, 116 insertions(+), 1 deletion(-)
+ create mode 100755 alps/device/mediatek/common/security/zechin6580_we_m/media.pk8
+ create mode 100755 alps/device/mediatek/common/security/zechin6580_we_m/media.x509.pem
+ create mode 100755 alps/device/mediatek/common/security/zechin6580_we_m/platform.pk8
+ create mode 100755 alps/device/mediatek/common/security/zechin6580_we_m/platform.x509.pem
+ create mode 100755 alps/device/mediatek/common/security/zechin6580_we_m/releasekey.pk8
+ create mode 100755 alps/device/mediatek/common/security/zechin6580_we_m/releasekey.x509.pem
+ create mode 100755 alps/device/mediatek/common/security/zechin6580_we_m/shared.pk8
+ create mode 100755 alps/device/mediatek/common/security/zechin6580_we_m/shared.x509.pem
+ create mode 100755 alps/device/mediatek/common/security/zechin6580_we_m/testkey.pk8
+ create mode 100755 alps/device/mediatek/common/security/zechin6580_we_m/testkey.x509.pem
+
+diff --git a/alps/device/mediatek/common/security/zechin6580_we_m/media.pk8 b/alps/device/mediatek/common/security/zechin6580_we_m/media.pk8
+new file mode 100755
+index 0000000000000000000000000000000000000000..281e403e5cffaa8a0a769ff354104fbce89e7b3b
+GIT binary patch
+literal 1217
+zcmV;y1U~yPf&{$+0RS)!1_>&LNQU<f0RaI800e>rr!ay9qXGc{0)hbn0K}i&uLrQ-
+ziX@kK19GtdqJXn+R)D&rGa(Bu4Zg}#34U0@jMrDfF{gSYorZn2*?~CT(Gj>*A0BLO
+z5kDy|)$LWaI@bs=lEV^)#KId7;0ysT5g5qH7V>yZiRzR%qawUpl1sTZsE2&!WoXo$
+z0_g4;qi!*Tc&n8uhjprYTo<<Q!qNCPolRKoGsD>h>F(Zpm$XXMzc!{xf<kf8TJb+*
+zivhuvvH-ZgGoLhLU;m~?NSI(PU~pG<?HNkxvA<egu(7+TVbit^+#OHv9t-wou5N}*
+zkJ~TIS@XmUd^1irR4WCLLQGEMWpw>G@$3RSnDzl_e7VJGiRzv}69NMP009Dm0RUGT
+z-%(H9>RG>b9;2XUi+XYUi^5Hc;R~RG+-DebcQ43#H_g8UP_jUnTB<TnbcG|j_VTr#
+z>>N=Q1^K)BS(Zua<2!26WcyE1;KV<jPktD)S&x8ZO1V(CJZT8Cn-`)c!G>VxZ!llI
+zR4?wW>D0w7-OI_~L+Djf;xF+}k)C~#V!izmfalq1ILW-Lsabbk&C|!F<tAE^IS&PB
+z>TKGH@6*%HkQF(FgoVElJUT$8X+*b5Y~ra_U)prqsN~o2&fjCQ>*iBu_=%_?(MB@g
+z3(eyf3t-zWlmhPyp{|X?aiSt4f!+;clT6Zf>A@ZpgZ-V?OC6r1LQ2BnwqXK+fdK4S
+zi8!TMHJhpA2NZd!ylbAZS~(DMRuPH9^}p7?ljXwL92uH&3gHFJU{^``znZJFe}%b*
+zcS<`fgf2)%98C>A1P%l{51XE?43DASZfq3GN2QF}SyK=qFBheE)@^I}PkaY~CWHwl
+zT}M3{(N)fPyh=CF1O;lEm=Zl_GqD1JfdJI`xDZ3Le7~}@nn_davR*~a@o?^_8ymrq
+zqQ!aZWt%9azDQ@d!510OKR~PJ;3#eK2~{Q*5Zu`Kn{7C+iSI+#ZOIb3pqR@@or+Ep
+zs8n`<C6^$QVDyCo^T9IV0)O{3!N^;B0w0S^NF@*xQj})LXPVao;c7>3av{b=H3I^H
+zfKn7qQ-;|5Z5s<d3N}_`L0i*n>GgC!zsG<TsFDNbaU8+Gz=MjXjE-LO_FR&OphuAg
+z@PY-{*T%&s0*l8DeH7$8v_W&>Z^9#o0Xog>yG&hdd};OZw~rdo5B@(W5Xd%cBtF*j
+zaaUX;c;XkfD}Iq5lLp@p26Bf@*vHCOfdYYmD1jBQf-kU|1hRv*PH@G$h$|AX7qfu$
+zR%{G7;%5?j-_Iq{KWMYiVCZTeGLm-RIf=fUqY<w|Q9yRi-suCPt(03F(xTfKG!ZLh
+z5>y%wb~*^`B^9x{&rvXHo$`%0DIBkU8)vBBw(eUBF?4%S9sBNxR6IDct;1A7cq7qa
+z0)c@5x3H}xT&b<v0Z}_w5%F;=c?bqH89K&|Ci)i;jj*p%eTaFG5C6|cB9sn|oL)bG
+z=6(M%QX8HcG7%(f#+uO8ih%mII#!J2%WM25A9W9y=s_iOc7~1np%U;n3Y|#?Jj7AG
+fIcI$X1K#KAOjw$f5B+y#M3K69)(Zx6&qEup&mlQp
+
+literal 0
+HcmV?d00001
+
+diff --git a/alps/device/mediatek/common/security/zechin6580_we_m/media.x509.pem b/alps/device/mediatek/common/security/zechin6580_we_m/media.x509.pem
+new file mode 100755
+index 0000000..26fd392
+--- /dev/null
++++ b/alps/device/mediatek/common/security/zechin6580_we_m/media.x509.pem
+@@ -0,0 +1,23 @@
++-----BEGIN CERTIFICATE-----
++MIID2zCCAsOgAwIBAgIJANRJVzHu7G6SMA0GCSqGSIb3DQEBBQUAMIGDMQswCQYD
++VQQGEwJDTjEQMA4GA1UECAwHQmVpSmluZzEQMA4GA1UEBwwHSGFpRGlhbjERMA8G
++A1UECgwITWVkaWFUZWsxDDAKBgNVBAsMA1dDRDENMAsGA1UEAwwEZGVtbzEgMB4G
++CSqGSIb3DQEJARYRZGVtb0BtZWRpYXRlay5jb20wHhcNMTYwMzIzMDMyNTAwWhcN
++NDMwODA5MDMyNTAwWjCBgzELMAkGA1UEBhMCQ04xEDAOBgNVBAgMB0JlaUppbmcx
++EDAOBgNVBAcMB0hhaURpYW4xETAPBgNVBAoMCE1lZGlhVGVrMQwwCgYDVQQLDANX
++Q0QxDTALBgNVBAMMBGRlbW8xIDAeBgkqhkiG9w0BCQEWEWRlbW9AbWVkaWF0ZWsu
++Y29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxJ/drwew34okl3gD
++crEAooCzb1aAuqMzIQsuDb7KUwl+WMKM11fCMad6JJ2GfbXZgTje0RG4VB8ebG4R
++Pyku1e1VtTrXCDCSwxKGxMIbD+AMAS8RGMjJFvJ4TInqlDijIrxbkku5NqiHfOZl
++aNSdAujuGaNuMYR4q5Uph3WqelwXtu/C0fg2nU1Y7jPD2QXp7t57l7RK1L82pkmC
++QnHRWvE/ZIsBwZWyALi+M580Y1//pkZImGAtYHBXdu0ZSumxv1pesLG7qWHTtg3c
++HU/vHgv2Z65uhkyP2y/MWfPEDHwzTjdUKwWQQkxO42V0/Tjx7AI7mPYBaXy5xWmJ
++6p5AEwIDAQABo1AwTjAdBgNVHQ4EFgQU4cWuxaYcwuiuICcq97GvQP8swKswHwYD
++VR0jBBgwFoAU4cWuxaYcwuiuICcq97GvQP8swKswDAYDVR0TBAUwAwEB/zANBgkq
++hkiG9w0BAQUFAAOCAQEAdOM/JEmp953+qKow4Zfx6xPk9GdUDpGQg3UNR8sH4dtm
++lWLp+GGcGJ8ikeZBx03JXOi+BIuJIMiPjkKyf2wv3mdXUhOvYBNpN7VZnUu3iH/x
++1Scq0qRa/DurJxfARwWDFFHU4YI+eVhgaoIft0Q1pDSMt+12GImRpcC73a3ox/Dn
++CT3D8mz6NSGUp38a1c/fXnYBV5EnqvmGpGAi6OhSaWzgiuVisiUmxHfKZ15jyxtl
++Xpz2vQNg+AXgrAd+jNu2vAyA7OIwlEGOvnj4/pcbg7+eo46fQbY10+DYFg6L1ZKJ
++YsgaQ6ytEIDSRXt2UDuNfN7RNg0M68Lyb2cZQmO+mA==
++-----END CERTIFICATE-----
+diff --git a/alps/device/mediatek/common/security/zechin6580_we_m/platform.pk8 b/alps/device/mediatek/common/security/zechin6580_we_m/platform.pk8
+new file mode 100755
+index 0000000000000000000000000000000000000000..9fb03477d4857c16d87e9e143126304a91362442
+GIT binary patch
+literal 1216
+zcmV;x1V8&Qf&{z*0RS)!1_>&LNQU<f0RaI800e>rrZ9p8q5=T`0)hbn0Kgw1XOtE~
+z#$(t+z}4t3$#mDX$<+KitqC2(zm+6{AiJ6ozOGnK++g_zKa%rplR-*l@5iAS8om3|
+z47VKdj}Rsy9f+rqsLfjtI9-gJ1)n@v{R{sPlk<@Q3WJ^F2}2%p*6yh=G7hP#j15iJ
+z;nHcluFnK17gD#l*2f439Vmf&1^nb9D<OwjTeQ>F`c}PQZiqly3xV8FrzM6I<$Daw
+zTE<FD*6-j^$X3rc*^NAJm4?U58{EB^sK&uBQA~Nb9#J=82E-vfUks-Hh-BSq#@99{
+zx>vb=FE6n2_%^uj{F<yYYmG@BsuHt1zeOJe0-tneR+b8R2pgY0Z2|)U009Dm0RRJc
+z%wv&3!JN@5lQx9q_X<7evglmK+|cLDIK%jkJ0}_&(%daee8}&cFDS5|Vn_Khy_!*R
+zFa0x?yB&<Aq8p+A{xb<jbrPleQPrZNsvWf5BLWs!Sye(^NVbOGue^8=v8bGoLq&89
+zP5#d^tASDq1dvERTl<E~xHE80P0ESyM1q0n_3Q|h>5W`95}f1qPd;CYYD$3W{D2pV
+z#@I}h`Wffycy%r!IvMTDlWjnyh!3thk}k(>2Ag3}64zG!*S<OctF=s8kD3uK!|-2T
+zsE*%b|IB^LW=P33!U#}wx#Q^<loBsXgrtaxKy+7_<v^SUkIoSP7*x$+Eu{j1fdJ`w
+zD<%^xEnvJALLs{7N}b~W?97k^5Yu;+ZosO?QTUl$WVmBvuj0%(hzIGD%-L?6)eNGv
+zTDSoWU9Au{vEz?!E!oH<C}%mJ5|km?WN89m4(>IIao*x+FBWN9AF65x_XvMv0eeVh
+z56@%LxLsus3z1SP_o$%X+!|gp+`j^WfdJB|kw%=9NoQnW8H_@SR*_h4G=oW{wQrmT
+z7OzR(4mUdhihud0Ljl}gK3il6yNSEUo?=fUlymgfIzI=`4jeHyI%dcb#M?mjnREEC
+zT%xQG0m_r1?sAv+4eO{RS{m08*dw>uT@9YWzWwUmv$`jumQDBl6@`emGmwbZw9^8C
+zfKP>Y&gLZB=iulRxJ+XvR}`c=(TWrJZ!UrLQ6^dOZ;d?735dYKeXKRaL4B)R(2G6<
+znByug<Pm39*u{4HtQdq`m74d((=zKFcG~!&oT;>OA#9fwCFfJQ1{WwDH2fTHWweed
+zdj>Pj8pKmqd}tZS_S{#>HsfTRAy){m9Rh)X0i6`@%ZEQev3?@+_7;OVJ<2Lj&mo)8
+zEepovwALh<yR-LOpO@@!c{Zn)pPq?<HkAU~k?Wn=eTbfonG3f0^iGTi`Gi?htev*=
+zGIn=gFP=5eO>Qz9Vw#)Uut5h0shSgG!luEMw;!0y?H!?@&1mas(Rz5zy9``1!8w!7
+z0)c>XB4n|zpfhI2US#cP@s9LqG;E@e63VipLxk$yCO(~4V&xbjs(zAIO}7Z%m+^-V
+z-sq5##gP!}0F|p~4BHH!h7J}j5LiCQuAm->(2f(5<QWQX{g||BEPvipTdq$Ckllcs
+eig3w5X;HQ-6i4wXg_i<JGDMw_38iPVlv_OjF+k=3
+
+literal 0
+HcmV?d00001
+
+diff --git a/alps/device/mediatek/common/security/zechin6580_we_m/platform.x509.pem b/alps/device/mediatek/common/security/zechin6580_we_m/platform.x509.pem
+new file mode 100755
+index 0000000..4cf5593
+--- /dev/null
++++ b/alps/device/mediatek/common/security/zechin6580_we_m/platform.x509.pem
+@@ -0,0 +1,23 @@
++-----BEGIN CERTIFICATE-----
++MIID2zCCAsOgAwIBAgIJAM7g7ZmCo4rqMA0GCSqGSIb3DQEBBQUAMIGDMQswCQYD
++VQQGEwJDTjEQMA4GA1UECAwHQmVpSmluZzEQMA4GA1UEBwwHSGFpRGlhbjERMA8G
++A1UECgwITWVkaWFUZWsxDDAKBgNVBAsMA1dDRDENMAsGA1UEAwwEZGVtbzEgMB4G
++CSqGSIb3DQEJARYRZGVtb0BtZWRpYXRlay5jb20wHhcNMTYwMzIzMDMyNDUzWhcN
++NDMwODA5MDMyNDUzWjCBgzELMAkGA1UEBhMCQ04xEDAOBgNVBAgMB0JlaUppbmcx
++EDAOBgNVBAcMB0hhaURpYW4xETAPBgNVBAoMCE1lZGlhVGVrMQwwCgYDVQQLDANX
++Q0QxDTALBgNVBAMMBGRlbW8xIDAeBgkqhkiG9w0BCQEWEWRlbW9AbWVkaWF0ZWsu
++Y29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwB8hZ5QWQsZj2EPA
++1eguyXTXtcnU/DutCR3Ev5UkgiC7mhG+rlhO3GD5Bj+S822TQUpl78ehGBq9+9MM
++txzxjxAmIR2Ip5GozVsQOF2MmwWfPFj9C/8Qk/ORAQqDneMJQx5z1u6pMDIOqaqM
++DU3W4dJpu67PBCkXUre41scIBx0ogXsF/OQiKyGHWVu009X6Vr1gbohAWguB3FCn
++JYYU5XsMzFrGSkzW7+BRyFbPN9mNPG+VhsfLG9y9mKjGwS9RTHm4HlE3YQbEIT1f
++DKb+iGTdacbXNie6V7l+Ly+w8vg2uO/8mqwza41JHqoSszu/RR8EAp90Z1aWCnkI
++G589bQIDAQABo1AwTjAdBgNVHQ4EFgQUqXKF9s3+mhMWJYq09jFQAqh235UwHwYD
++VR0jBBgwFoAUqXKF9s3+mhMWJYq09jFQAqh235UwDAYDVR0TBAUwAwEB/zANBgkq
++hkiG9w0BAQUFAAOCAQEAXBjgnTMOMVYoDDO86UbWlh1SqB2v1kehGLp955HIs+IE
++Hz1LQ51VimkAM2dVqNIKPGBYokcqQHq+36JUbgasXLl34nirs+DAvytHbrB4SD3s
++ExY/loP6vnnP3PQrBPyemPiCWx1ZduWfWyci0eoQwoxE9EM+wWcG9zX8bwVXSb1f
++FQSV3jPcwZk/RA+kyPzOaHZQq66l7Vyuqiu6JNGR2302p9ONXqdOGjrfZ+3TtVEL
++5WjfcPd2GAykJ28vjM9UMh8EOGG0RHh1UnRsBtrWSSv1W/2OQjl6PvwEBySRNOIg
++gqMgYAsql+PBdkMP+IhFG3V1N1XIs0nO9h0Tpv58Kw==
++-----END CERTIFICATE-----
+diff --git a/alps/device/mediatek/common/security/zechin6580_we_m/releasekey.pk8 b/alps/device/mediatek/common/security/zechin6580_we_m/releasekey.pk8
+new file mode 100755
+index 0000000000000000000000000000000000000000..05b3512139a4834152b6bb10d84046ffa917945a
+GIT binary patch
+literal 1219
+zcmV;!1U&mNf&{+;0RS)!1_>&LNQU<f0RaI800e>rsW5^Br2+u}0)hbn0J3Dq(K!Mf
+zsAUm<_BZzJ@Q(G5RU`RV?<s6u9)Vv{E5hqR9wx}!i%2CCbTMjuYzAN$?bq{m8PvW6
+z(%8GdGUy>^HN^;?dw5V12FdDhcrozwTK?gjrr~@DOa)_qnLrH6@j1}v<m?QuOlwG{
+zQ65mSlLQTbfQ*#(!UD|+3YDfFB{0mpJV&aB9ZY&<00L1mgkCEPQoLE%rVwW2;(mHF
+zh2ruFS&P2<);ZdL|G|D{L(;?Wc%aB+q{P&^mHMMitmiGD#j@W|r~bd51k|80ijDDP
+z@~+PqU%Lvp>uT}rVNvh1O!2>hgy7Zf@sk0(D1blK>}J1Wu{2hja{>ba009Dm0RaH3
+z^uaerz-4D#q}8{)l4T(9Y<p1>a1!?s^2UGFEYQRz3nrzlwFe63>-H#?Nt47u5cqbh
+zCZ4>Xc-p0N4CZWSoogdSUEPKrp6~%<IDA<js;8gc_!3MyC78+1m+mtLu1+A}9wMn@
+zZ-%-a-_((Gt4qJ`v?U$HWdg=nbkj7ZZn~|cp~Ey%&|iO*p!|wyXf=AYo&q3*o090i
+zj9(*VWyv%RW=LV2SF#&TDdUs43+V`H9Z{pQ*dkPgRY_rTQ1^CS8lDKX9-`DR3L!(C
+z5~!clCu6OCu~foj^bclV_~}AK&Ja*>-UE|YbPo6%fz|2SHWpGU^a5V5(F$P#fq?++
+zXOU(JcX@}NfvZ4O^>v%A(MzK7MxoH%ozg=cb#cgr^HV|!MNdY#(i2i2I1doM!VDu+
+z0pHMC-?qgcEM{8&PsQKZH@~$J9Mt~<H;5+t6%Eeu48ek2)xpk`<6fAw9P#A$4=2gR
+zsdio~iuU0LbRm$`4Z4_3T4t*La8+djfq?+PUF~Bs;B!0hS&v1$?17_gHFSo9Mq`8n
+z&O=E2zS$&w9u@v3c+AJEIzLB@DV%1_PhP4M5$7lc7D1BfWBz<}If?=tObxMXVD>Wh
+z)@$<y!f0nf9qgMHiKokhW%LWs!4YJ(ema1b1=$`Js=+e$>l~>R)Mjuqp%IEQhimr&
+zfq*Y65IoULryNFQM0|IbSW+QsA2_q_a9?U?+)42yPy(WQ0OWDq>n;W4vT5=`)ZAjp
+za#!MPtma$iZVV%FQnYDYlh-i8f|#0Fyaye?evlve!qA2r9;Ty$<O%|kSxm(ns{-x<
+zSjj;*wTNftC%yF<AwmG2>7OuO@m{Y*>G1-AfdIc~HeRqU`8qhuL~aGI=EiVQ@**wS
+z3J5=`D)u7Q+eIB=q)dQ^PHUEmoRC_4#O&R94jy=4CH#UTMHnMCrSH4V%<hn_bSj5O
+zv2nnDR%bZill8f)M%02fa!F(JJVVWKZWkgZvzub8YXC1<v}Ze=ait^PycYzhO~sDI
+zguMcRfdG~*)!WAdh1sf=ayjUBTb*PP(V4D~x_lP&mvu!|4Y$9JcAk|$@vh1ca00b(
+z9xNZ91Kw|4fJY-(uKq0I3jFZ0T|FIbA!qV$1#Wn?X)Q7g!DTfw#-7B?+%FuE*6N0+
+hSpDfD{)mH62E%EU_v*m~nNGvI)Ked!o=n=dD33f{MJNCO
+
+literal 0
+HcmV?d00001
+
+diff --git a/alps/device/mediatek/common/security/zechin6580_we_m/releasekey.x509.pem b/alps/device/mediatek/common/security/zechin6580_we_m/releasekey.x509.pem
+new file mode 100755
+index 0000000..cde59a2
+--- /dev/null
++++ b/alps/device/mediatek/common/security/zechin6580_we_m/releasekey.x509.pem
+@@ -0,0 +1,23 @@
++-----BEGIN CERTIFICATE-----
++MIID2zCCAsOgAwIBAgIJAJZd2Vn7C+5QMA0GCSqGSIb3DQEBBQUAMIGDMQswCQYD
++VQQGEwJDTjEQMA4GA1UECAwHQmVpSmluZzEQMA4GA1UEBwwHSGFpRGlhbjERMA8G
++A1UECgwITWVkaWFUZWsxDDAKBgNVBAsMA1dDRDENMAsGA1UEAwwEZGVtbzEgMB4G
++CSqGSIb3DQEJARYRZGVtb0BtZWRpYXRlay5jb20wHhcNMTYwMzIzMDMyNDQ1WhcN
++NDMwODA5MDMyNDQ1WjCBgzELMAkGA1UEBhMCQ04xEDAOBgNVBAgMB0JlaUppbmcx
++EDAOBgNVBAcMB0hhaURpYW4xETAPBgNVBAoMCE1lZGlhVGVrMQwwCgYDVQQLDANX
++Q0QxDTALBgNVBAMMBGRlbW8xIDAeBgkqhkiG9w0BCQEWEWRlbW9AbWVkaWF0ZWsu
++Y29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsmTH0TkCHKhlEX/2
++N/bt8I71j1Uj+VfvKWxdHoFfUivC60EeJsjbi0glE3Qxan1sBmAY7dfzdhnUvgTS
++2Lu/MughZzXFCJ57eFASBsnqcHgx8PRa/uGcpuF8CEwFY3+ZQAzK8TnQ5+TsDK9M
++a0imUR5QsZMEDYCAjJT2wgLNCQqVph4lMMy7PEeqhx1MemUAAlEyhF4rC1K8Wdim
++EGbk4n56M4Xi8glZi7761jnaf//BfmZD0sPweKDIZKTE1LqV+qNNrOctoMWy30+n
++/r+eBNSgMYqN8WTyrs8YX7sKuOtq8exhUe+zTPG/goTg1e3xkwG8KIA/1uxmv2Kx
++NFabcwIDAQABo1AwTjAdBgNVHQ4EFgQUKYcTw+LOSukI6bF6xUdfIjsEKu0wHwYD
++VR0jBBgwFoAUKYcTw+LOSukI6bF6xUdfIjsEKu0wDAYDVR0TBAUwAwEB/zANBgkq
++hkiG9w0BAQUFAAOCAQEApgUPyYbsggOR3AzP1Rt5m6JM6P4Z712GWHMF3PXpNnu+
++5SgtbyIDjMBKCyPfbrUKkRIxBJkZMPvkWw6uFYteLayGAUsbts6m6NkjdflbCNF8
++GTAvL+t/9/73YqfLBCy3AemWS8c8AByuvY9ZRrBv+QZUy6xr4hKc2RWcXG7M4pbl
++lyztUikd0+zuuM0cdZQ/WqUcySgcH5G4o7Y4U2ds6R3A5cm9ZIh2BX221BCB48vX
++WSGLOhWwZydibYxvoCvVjMCKpPsbi7jdQ4arAnZrxeUI8cWeIKMXd9H1K0+WprT1
++abOjonrgpgL2SCZsqZMWv0PLk7naYgkDcrHQNiNWAQ==
++-----END CERTIFICATE-----
+diff --git a/alps/device/mediatek/common/security/zechin6580_we_m/shared.pk8 b/alps/device/mediatek/common/security/zechin6580_we_m/shared.pk8
+new file mode 100755
+index 0000000000000000000000000000000000000000..162afb85ab9ff7fcf60dda525b389bb9b043eb70
+GIT binary patch
+literal 1216
+zcmV;x1V8&Qf&{z*0RS)!1_>&LNQU<f0RaI800e>rrZ9p8q5=T`0)hbn0KQ23G}k@J
+zAYj%G6S@dvNazcgRCtH1ld<TAR_w|v<w=0B)tc}gAl_-y=>|(vSf-ksW!q)A($dh~
+zF7hXxN0B^g87?{`eH#tvJ@7@X_aBY^Uifwe+gN(d#0vCnY6kBj^jod$80x!n$utVI
+z5`3E_O6iQi^EF+`^e&KQ?eW@0t;K6O1UCBNojqaP;~WO;`4&uq2=3&}HL5*H`}ba5
+zAJm$KSTU$Pm3EXSp*fU6bTw?{Hl55&sbkRCL#i(9kU2OwaenfIG(4-e7aNCE0HZcY
+zl<Qmm4@`p>+XpzxK~o~QmkdLk>~RZe*Rx2{a2_htWV~>`0G;ABMFIl>009Dm0RV2P
+z0Jc>skZJ7(?>^V0gCOP^z$f>_XFsWGA)Ya;&16-ds<%Fvzudc<?dl1L3fp#IS?&IA
+zq|&ZgTNp1XjFk^ageOX~^L}y~Ut*2*=i1zr_C<o%7)IQv<~vDermfF}h~9MOt8_jl
+zZuQ0YCyUIzX)Ua-_mepY=O)8pr3qiBN9mUVFB8>WI)Dm@euU&qFEIOj)|C7I6;=6<
+zA_Jo@m&{gFi^$B2GPp+gDG!$vcF+#Mt&#!Age9S)1RF9+F8X8ZKKx!8!pGKHdt03>
+zAf!0oWJ?}Ad8=1h3|0a)6)kl9f0AzM6QO=%z0T!uAY6Avk+U&c&8E!Gxh(>LfdKYa
+zTj=#g2AhYDqCs4^@@%G@l$18`d{eDS_4uOx>2<$HGZiI-Q@ZW3SyA}?&&~NXw#c5?
+zv0Xs6SPH}8anskuOWH?9Vu4;DAsfBsHAxfx{RQT<Cs;j^&Sc)B6Q_0vbxSI6(teRy
+zRxQFECGSV&u+KpYDG=KUCxTzYHMatRfdIw7!)#775Zz&t?35B0rdi=GDr1`LD7zsr
+zQ$z}x^K)BP%*g{Hx(UwE#zTWgy!d4iEj%$DoifyR4dXK2cljP?nyl2kMybD#il=Sk
+z&J0s09{ux12D7wwUG=Ifc3;;~szlWxa^)k;_l%VSJ!(X-@|VXyB2mMskxz8v4C4ZU
+zfdGqk`7%2yi9;mJEHJe`K!PI@BTR;lK-FIsu$#mzZXm1Lv!NACh1(w&d1_yM(^%Q=
+zZcWD_2g$Svh;I+qV~Tuk$1@#=OWo33eqttZUs<qdeE14gl(6us%pY&91Vfu2&d6_$
+z(4Du;%x$}<r2&J(7Y9Gw0kio|g@4+Yx}gGp7G|Qnq8}#7?L)VT4uhXmk1ea8ob4m9
+z4-#rzO4lX4>znD8+r$%32_BtS2#6Qp3zFuH>jQ7gQbr9-uXcnWv{48&i{!{0a+c5@
+zCsd~bzG$!-6m;56fg|UD?8X10+rearXPjbZlBT6(M|}Bs5KsFnHfHdAQmx|19d(-m
+zfq?+Bm;6E;mWphXL%offRLCB8H(iYAZA`^cTLK{~ur;@_#W$oT#<lZI2+PDJ=qTdH
+zYl);Ztu=4j7iLzmzopSn`)PmRoY3X;@G3;YcB%MZC!>qsVIr&r5h)L}h^HVe)-opr
+ewTQ^HDA?ZWKp;~T)lz-((2h0-%i`kP<^;7FVMnL{
+
+literal 0
+HcmV?d00001
+
+diff --git a/alps/device/mediatek/common/security/zechin6580_we_m/shared.x509.pem b/alps/device/mediatek/common/security/zechin6580_we_m/shared.x509.pem
+new file mode 100755
+index 0000000..df449ac
+--- /dev/null
++++ b/alps/device/mediatek/common/security/zechin6580_we_m/shared.x509.pem
+@@ -0,0 +1,23 @@
++-----BEGIN CERTIFICATE-----
++MIID2zCCAsOgAwIBAgIJANy6vdUeC03fMA0GCSqGSIb3DQEBBQUAMIGDMQswCQYD
++VQQGEwJDTjEQMA4GA1UECAwHQmVpSmluZzEQMA4GA1UEBwwHSGFpRGlhbjERMA8G
++A1UECgwITWVkaWFUZWsxDDAKBgNVBAsMA1dDRDENMAsGA1UEAwwEZGVtbzEgMB4G
++CSqGSIb3DQEJARYRZGVtb0BtZWRpYXRlay5jb20wHhcNMTYwMzIzMDMyNTA2WhcN
++NDMwODA5MDMyNTA2WjCBgzELMAkGA1UEBhMCQ04xEDAOBgNVBAgMB0JlaUppbmcx
++EDAOBgNVBAcMB0hhaURpYW4xETAPBgNVBAoMCE1lZGlhVGVrMQwwCgYDVQQLDANX
++Q0QxDTALBgNVBAMMBGRlbW8xIDAeBgkqhkiG9w0BCQEWEWRlbW9AbWVkaWF0ZWsu
++Y29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvkj7NNc9ySBg1g4T
++ughjSOgLmFR4h6yTseiGVuzKK+VJgLDVmvAeIN5p0+kGS1NYppqcZdtluNLS0N0u
++8iedR5E8ahkuOiR9Gw3oPfBFrfcfjf5e+HYF21h6zcQK9G1qBu8i9Fut7Bjqu3LJ
++NAq0EnybJUrpjMDzNV3J9C6QZu3x2kWtxWs5BDb64Z09YdzjHAbs+RZMggju5Mw1
++qj1J+/deXR/UmoVYMag8lXaUJqE5lEF0NWzlNp3MTKlj0NhDqi7skDk4OHF+8oQ0
++PKu2FxuHVACjNkiU61v+D0yDF9sHOMpBUyK4lwxDnOxxC2nXs0jScB4q02S8cL4A
++neI1RQIDAQABo1AwTjAdBgNVHQ4EFgQUlhWpY7HQdMUBT+EVTBjXEAfRYewwHwYD
++VR0jBBgwFoAUlhWpY7HQdMUBT+EVTBjXEAfRYewwDAYDVR0TBAUwAwEB/zANBgkq
++hkiG9w0BAQUFAAOCAQEAW5F33wlVJoC2He8kqMtjIZrCk0EDtXWbA2zzuigXab5m
++Zrc5IqsWsS5HSGdD1YN21Vfo7PlulJUBNBRIwyzh/hwOPmCKWVPDYg9qqNP5Tpkt
++bQQ9I5G979nmCPI3aDiYe7tBKh2fB0gytnEem1B05KLGiNL9nLBNa/jXdKop3Iy9
++E15m8sbS6v1zA5lZfD1Tz5Ff6ctqrHxqCW44Bcd1KSXtBvYf0fyovwjawoTat/9F
++wiPKDuY2c3NbsmoHYlL4LBFy7c4XKwH0QM2aZgPfftPXYJvQsxNDF8gJMTAuLE9R
++HOhs48HKGUrNdNlVR6D+jf2Ospvql4KJOTPJxqaWXQ==
++-----END CERTIFICATE-----
+diff --git a/alps/device/mediatek/common/security/zechin6580_we_m/testkey.pk8 b/alps/device/mediatek/common/security/zechin6580_we_m/testkey.pk8
+new file mode 100755
+index 0000000000000000000000000000000000000000..cf8c7a1419bfd82ef1562c365701f1354e25efa9
+GIT binary patch
+literal 1217
+zcmV;y1U~yPf&{$+0RS)!1_>&LNQU<f0RaI800e>rr!ay9qXGc{0)hbn0JKQKBV!5K
+z8kh^q&70mP6@hlNTpo|XvY>~<S7rA_VUY89&d_fc6DXsg(!5W<n8~R1Pn#q-l7_x^
+z_OSup3|1HVcq@Eo_EFPBGW=D|9&mg2clZCm)p}VU^Pf)ap1e@R<u=<*|9I6{uZ$$4
+z7?Zkr1|p_Kzldv-JfmUpd`h9)7Xg}>zY@Ku)qo4Rr$LtOjhg@)S^<BZWL%Lt39S~H
+zO%i`g#;vuK+6?XDnxawNTpxtmw)a;Q(?C|KxI$5;-TqN#BQ+ZGOCa>%4W76au$^ji
+zy}MHt6CMi^7;I^EkF5X?w7yjCx#hQCM9oJpFXCF$tK6w%@?l+E!2$yT009Dm0RSY0
+zNP51hR1J$4c%`Bll4Wq<cM#$*1n~xo`U*~Al<<1UmxOJ+(^Jwrvuu4aI)dEy85)x|
+z_b%6z<;;6`0boX8eIT;VbkOxGa{5slpnbLzrormJD0LQJ&y_BOa&m=xXD4^TT|bXr
+z$fRc@RMxq+V5QlI4MGcqpF;g*?coH#&t)yzrqpwO4hIPK&@e3j847zT;2IRPU9$Yo
+zX7ApAtZjqNskA?K?+GO;`UK7T&?|pn!Clx_n+H8gIweipP-{xAx6YJlxjlP8zAB&D
+z!t<NSmc>QH+sq)NsIGSKRzKhlF8xeKU$QPA5&apR)~2P{(4s-tE3xB9Mlk|`fdJYI
+zXu*6PXd0>6BvXJU7r%$?&-PLaN|Fu2^?xG{p7L!pU*F6pANyXySaVjT5RY9E!UI|x
+z$obH(uideY=#a^%^9^yJf`~3ImtK548T6nwM~NFzOUc(iWf;$_&5`$DWj4A)&NyQh
+z{2m<J<+6(EMju2+DU7%oH67C$sjC8kfdJF0ruqcw?zTd1$qtQ;Um))wdE*)R>z}ND
+zN-<&Kk4?b>%W4PRMQlQNc%!%?9k%0ia1rHJix>`Q6xVoTLYEY;HuoX=r}Z$AiV-ou
+zu;vV6Ae864768KXLR!ifZ*o;fzrCYC1Kt>~1@$=R&{tNMhI=$Gb`xI!VnGGP-$Md{
+zfdJ7bnvdqsih1!Z5|nCNpYkA}br})xG}6x!kxeK<u_IWop}X2>Ib3zLH3mjG#vRWm
+z=9DsyZiRcX+aK&+bd=U?65(}vgImA&|41q!xWE`9nGzzqBiQtLqAy>bq5gku-w4$?
+zkBT)q>Jqe?7RKUC0fC~7B!&=PRlZ9u%S!@*fHX{rA7hbilL-wNj)?g(RS)2$T`;id
+zz&1VURuoD|KRo_)#z_?_FB++9oq$B8wCA*da9fKjsSy4&kQ~L~(KMneVVk<NKS%Z5
+z_-mt~(dDCMONEM>p(}~<O+I_o<e49~N2CjoDHBdZnV72Pc76rOi>{PEhkwMkf;(&N
+z!vcYTdeW29ZaHsjlN@Fj>F}Cb%A#X~*h&V|D*GuH-Bu>dq2c_yb=j@5k)61AkWGc1
+z+A3wM2}hI}&H%%bp7ilK8aBnCucYk4b!{07%4u+j{P2W7n>Pjk1P+Hdy%CU#Qdww9
+f(^Ma#+Stz<uIWFw(q!uMO7^2ASGmY_kCf7IHvvac
+
+literal 0
+HcmV?d00001
+
+diff --git a/alps/device/mediatek/common/security/zechin6580_we_m/testkey.x509.pem b/alps/device/mediatek/common/security/zechin6580_we_m/testkey.x509.pem
+new file mode 100755
+index 0000000..ab31247
+--- /dev/null
++++ b/alps/device/mediatek/common/security/zechin6580_we_m/testkey.x509.pem
+@@ -0,0 +1,23 @@
++-----BEGIN CERTIFICATE-----
++MIID2zCCAsOgAwIBAgIJAJzjlM7+Gt7GMA0GCSqGSIb3DQEBBQUAMIGDMQswCQYD
++VQQGEwJDTjEQMA4GA1UECAwHQmVpSmluZzEQMA4GA1UEBwwHSGFpRGlhbjERMA8G
++A1UECgwITWVkaWFUZWsxDDAKBgNVBAsMA1dDRDENMAsGA1UEAwwEZGVtbzEgMB4G
++CSqGSIb3DQEJARYRZGVtb0BtZWRpYXRlay5jb20wHhcNMTYwMzIzMDMyNjIyWhcN
++NDMwODA5MDMyNjIyWjCBgzELMAkGA1UEBhMCQ04xEDAOBgNVBAgMB0JlaUppbmcx
++EDAOBgNVBAcMB0hhaURpYW4xETAPBgNVBAoMCE1lZGlhVGVrMQwwCgYDVQQLDANX
++Q0QxDTALBgNVBAMMBGRlbW8xIDAeBgkqhkiG9w0BCQEWEWRlbW9AbWVkaWF0ZWsu
++Y29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtEjBI2MJ2RqYC8vN
++m94mFYF2tFwej8GyoIfDV2X3RWGQ83jO0G8XEyijoNK8T7+Yyaj1T5skOJKGvnb2
++sQHeDFYX+ngrfGf2UdNEMvxVzR5we/d39//A1XpZH/OfTuyevFDE5TbbTf941Viv
++jCSjGJO6eQYipkW/iGuTPKNh8XxKodsXAZqYvxK9qNWAC7mnQZbtjZsAG1oBf51k
++XJE6Ca0WmU0Sf0vGrbWU2gzt4pqiUd1cH4TatvdXFNNAVqm4QlGm3f5RZiM1GvJL
++IPTgDZ64FbCdanO9u1MVEx4LEhhsaXWPrQAPtL5U7rnlt19EzUcvL+Ja06vcqWTy
++YV1cwQIDAQABo1AwTjAdBgNVHQ4EFgQU68KAhAoL1htB3HDCv/VerMfosxkwHwYD
++VR0jBBgwFoAU68KAhAoL1htB3HDCv/VerMfosxkwDAYDVR0TBAUwAwEB/zANBgkq
++hkiG9w0BAQUFAAOCAQEAroFCibqeuLj3nt4S1y14zEx6UHyKpcY71UmfrqupL09D
++k0UddAYGIm8soRxYbk5xMS/Zpjexunh9bx3iuSfkRmsz4H4N92R/e4ict6su9Jcu
++YX+VavKWYDKvckCiUiNHziNsyyWz8mQ04RDKxKkWYeZN6bd97E4pd2IfYAu967IT
++TuaLp3npmuedrE6sdnD6C0Lj+di8abAO+NwHb12Q7HsRCrA6rmkmCmyhBU/gnwFc
++xJs9QotQZmYZaWS5OFO4PaKIlrygQ2yf07zypH2BV69yQ6jKD70AMVSRIlLJmQik
++ptLVGkTOeFhzmuqdex/jEbnUIfAmo2p9BxKNBdeTBg==
++-----END CERTIFICATE-----
+diff --git a/alps/device/zechin/zechin6580_we_m/ProjectConfig.mk b/alps/device/zechin/zechin6580_we_m/ProjectConfig.mk
+index f11c517..ea26db0 100755
+--- a/alps/device/zechin/zechin6580_we_m/ProjectConfig.mk
++++ b/alps/device/zechin/zechin6580_we_m/ProjectConfig.mk
+@@ -552,7 +552,7 @@ MTK_SHARED_SDCARD = yes
+ MTK_SHARE_MODEM_CURRENT = 2
+ MTK_SHARE_MODEM_SUPPORT = 2
+ MTK_SHOW_MSENSOR_TOAST_SUPPORT = no
+-MTK_SIGNATURE_CUSTOMIZATION = no
++MTK_SIGNATURE_CUSTOMIZATION = yes
+ MTK_SIGNMODEM_SUPPORT = no
+ MTK_SIM1_SOCKET_TYPE = 1
+ MTK_SIM2_SOCKET_TYPE = 1
+-- 
+2.3.7
+

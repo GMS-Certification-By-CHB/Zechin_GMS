@@ -1,0 +1,63 @@
+From 82194281f3ba4be451f567ab68c8402fe54c3d05 Mon Sep 17 00:00:00 2001
+From: chehongbin <chehongbin@hkzechin.com>
+Date: Tue, 17 May 2016 14:54:39 +0800
+Subject: [PATCH] =?UTF-8?q?[HTM][GMS]=E6=89=93=E5=BC=80AFW=20FOR=20GMS?=
+ =?UTF-8?q?=E8=AE=A4=E8=AF=81?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ alps/device/zechin/zechin6580_we_m/ProjectConfig.mk        | 3 ++-
+ alps/frameworks/base/core/res/res/values/config.xml        | 5 +++--
+ alps/frameworks/native/data/etc/handheld_core_hardware.xml | 3 ++-
+ 3 files changed, 7 insertions(+), 4 deletions(-)
+
+diff --git a/alps/device/zechin/zechin6580_we_m/ProjectConfig.mk b/alps/device/zechin/zechin6580_we_m/ProjectConfig.mk
+index c83ae6a..2301916 100755
+--- a/alps/device/zechin/zechin6580_we_m/ProjectConfig.mk
++++ b/alps/device/zechin/zechin6580_we_m/ProjectConfig.mk
+@@ -121,7 +121,8 @@ MTK_ALPS_BOX_DONGLE_SUPPORT = no
+ MTK_ALPS_BOX_SUPPORT = no
+ MTK_ALPS_BOX_TVE_SUPPORT = no
+ MTK_ANDROIDFACTORYMODE_APP = yes
+-MTK_ANDROID_FOR_WORK_SUPPORT = no
++#chb add for AFW 
++MTK_ANDROID_FOR_WORK_SUPPORT = yes
+ MTK_ANTIBRICKING_LEVEL = 2
+ MTK_ANT_SUPPORT = no
+ MTK_API_CHECK = yes
+diff --git a/alps/frameworks/base/core/res/res/values/config.xml b/alps/frameworks/base/core/res/res/values/config.xml
+index fe2a254..9b5b1d9 100755
+--- a/alps/frameworks/base/core/res/res/values/config.xml
++++ b/alps/frameworks/base/core/res/res/values/config.xml
+@@ -1727,9 +1727,10 @@
+     <bool name="config_syncstorageengine_masterSyncAutomatically">true</bool>
+ 
+     <!--  Maximum number of supported users -->
+-    <integer name="config_multiuserMaximumUsers">1</integer>
++    <!-- chb modify for android for work & GMS-->
++    <integer name="config_multiuserMaximumUsers">8</integer>
+     <!-- Whether UI for multi user should be shown -->
+-    <bool name="config_enableMultiUserUI">false</bool>
++    <bool name="config_enableMultiUserUI">true</bool>
+ 
+     <!-- If true, then we do not ask user for permission for apps to connect to USB devices.
+          Do not set this to true for production devices. Doing so will cause you to fail CTS. -->
+diff --git a/alps/frameworks/native/data/etc/handheld_core_hardware.xml b/alps/frameworks/native/data/etc/handheld_core_hardware.xml
+index 1355ab8..48f5fed 100644
+--- a/alps/frameworks/native/data/etc/handheld_core_hardware.xml
++++ b/alps/frameworks/native/data/etc/handheld_core_hardware.xml
+@@ -48,7 +48,8 @@
+     <feature name="android.software.device_admin" />
+ 
+     <!-- Feature to specify if the device support managed users. -->
+-    <!-- <feature name="android.software.managed_users" /> -->
++    <!-- CHB add for android for work -->
++     <feature name="android.software.managed_users" /> 
+ 
+     <!-- devices with GPS must include android.hardware.location.gps.xml -->
+     <!-- devices with an autofocus camera and/or flash must include either
+-- 
+2.3.7
+

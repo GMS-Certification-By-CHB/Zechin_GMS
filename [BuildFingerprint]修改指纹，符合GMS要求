@@ -1,0 +1,60 @@
+From 6e85d8a495be2d2819fa581301ad3464daf00739 Mon Sep 17 00:00:00 2001
+From: chehongbin <chehongbin@hkzechin.com>
+Date: Thu, 1 Sep 2016 18:01:52 +0800
+Subject: [PATCH] =?UTF-8?q?[HTM][Build=20Fingerprint]=E4=BF=AE=E6=94=B9?=
+ =?UTF-8?q?=E6=8C=87=E7=BA=B9=EF=BC=8C=E7=AC=A6=E5=90=88GMS=E8=A6=81?=
+ =?UTF-8?q?=E6=B1=82?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ alps/build/core/Makefile      | 7 ++++++-
+ alps/build/tools/buildinfo.sh | 6 +++---
+ 2 files changed, 9 insertions(+), 4 deletions(-)
+
+diff --git a/alps/build/core/Makefile b/alps/build/core/Makefile
+index bebadc4..44db49c 100755
+--- a/alps/build/core/Makefile
++++ b/alps/build/core/Makefile
+@@ -127,6 +127,11 @@ BUILD_VERSION_TAGS := $(subst $(space),$(comma),$(sort $(BUILD_VERSION_TAGS)))
+ # A human-readable string that descibes this build in detail.
+ build_desc := $(TARGET_PRODUCT)-$(TARGET_BUILD_VARIANT) $(PLATFORM_VERSION) $(BUILD_ID) $(BUILD_NUMBER) $(BUILD_VERSION_TAGS)
+ $(intermediate_system_build_prop): PRIVATE_BUILD_DESC := $(build_desc)
++#chb add for GMS start
++PRODUCT_BRAND_KEYS = HTM
++TARGET_PRODUCT_KEYS =  Telenor_N940
++TARGET_DEVICE_KEYS = Telenor_N940
++#chb add for GMS end
+ 
+ # The string used to uniquely identify the combined build and product; used by the OTA server.
+ ifeq (,$(strip $(BUILD_FINGERPRINT)))
+@@ -137,7 +142,7 @@ ifeq (,$(strip $(BUILD_FINGERPRINT)))
+   else
+     BF_BUILD_NUMBER := $(BUILD_NUMBER)
+   endif
+-  BUILD_FINGERPRINT := $(PRODUCT_BRAND)/$(TARGET_PRODUCT)/$(TARGET_DEVICE):$(PLATFORM_VERSION)/$(BUILD_ID)/$(BF_BUILD_NUMBER):$(TARGET_BUILD_VARIANT)/$(BUILD_VERSION_TAGS)
++  BUILD_FINGERPRINT := $(PRODUCT_BRAND_KEYS)/$(TARGET_PRODUCT_KEYS)/$(TARGET_DEVICE_KEYS):$(PLATFORM_VERSION)/$(BUILD_ID)/$(BF_BUILD_NUMBER):$(TARGET_BUILD_VARIANT)/$(BUILD_VERSION_TAGS)
+ endif
+ ifneq ($(words $(BUILD_FINGERPRINT)),1)
+   $(error BUILD_FINGERPRINT cannot contain spaces: "$(BUILD_FINGERPRINT)")
+diff --git a/alps/build/tools/buildinfo.sh b/alps/build/tools/buildinfo.sh
+index 99fe76f..61b9606 100755
+--- a/alps/build/tools/buildinfo.sh
++++ b/alps/build/tools/buildinfo.sh
+@@ -22,9 +22,9 @@ echo "ro.build.tags=$BUILD_VERSION_TAGS"
+ echo "ro.build.flavor=$TARGET_BUILD_FLAVOR"
+ echo "ro.product.model=$PRODUCT_MODEL"
+ echo "ro.product.brand=$PRODUCT_BRAND"
+-echo "ro.product.name=$PRODUCT_NAME"
+-echo "ro.product.device=$TARGET_DEVICE"
+-echo "ro.product.board=$TARGET_BOOTLOADER_BOARD_NAME"
++echo "ro.product.name=Telenor_N940"
++echo "ro.product.device=Telenor_N940"
++echo "ro.product.board=Telenor_N940"
+ 
+ # These values are deprecated, use "ro.product.cpu.abilist"
+ # instead (see below).
+-- 
+2.3.7
+

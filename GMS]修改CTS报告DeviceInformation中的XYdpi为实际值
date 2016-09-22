@@ -1,0 +1,46 @@
+From 228601d408ec300ed6988eb7e992538eb05b90fa Mon Sep 17 00:00:00 2001
+From: chehongbin <chehongbin@hkzechin.com>
+Date: Wed, 14 Sep 2016 16:07:37 +0800
+Subject: [PATCH] =?UTF-8?q?[HTM][GMS]=E4=BF=AE=E6=94=B9CTS=E6=8A=A5?=
+ =?UTF-8?q?=E5=91=8ADevice=20Information=E4=B8=AD=E7=9A=84X/Y=20dpi?=
+ =?UTF-8?q?=E4=B8=BA=E5=AE=9E=E9=99=85=E5=80=BC?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ .../jd9161ba_dsi_vdo_wvga_zhongguangdian_shenchao.c                    | 3 +++
+ .../nt35512_dsi_vdo_wvga_zhongguangdian_shenchao.c                     | 3 +++
+ 2 files changed, 6 insertions(+)
+
+diff --git a/alps/kernel-3.18/drivers/misc/mediatek/lcm/jd9161ba_dsi_vdo_wvga_zhongguangdian_shenchao/jd9161ba_dsi_vdo_wvga_zhongguangdian_shenchao.c b/alps/kernel-3.18/drivers/misc/mediatek/lcm/jd9161ba_dsi_vdo_wvga_zhongguangdian_shenchao/jd9161ba_dsi_vdo_wvga_zhongguangdian_shenchao.c
+index 3556813..ea05497 100755
+--- a/alps/kernel-3.18/drivers/misc/mediatek/lcm/jd9161ba_dsi_vdo_wvga_zhongguangdian_shenchao/jd9161ba_dsi_vdo_wvga_zhongguangdian_shenchao.c
++++ b/alps/kernel-3.18/drivers/misc/mediatek/lcm/jd9161ba_dsi_vdo_wvga_zhongguangdian_shenchao/jd9161ba_dsi_vdo_wvga_zhongguangdian_shenchao.c
+@@ -192,6 +192,9 @@ static void lcm_get_params(LCM_PARAMS *params)
+     params->width  = FRAME_WIDTH;
+     params->height = FRAME_HEIGHT;
+     
++    params->physical_width  = 52; //add by tianyunfei for BLU CTS Xdpi Ydpi
++    params->physical_height = 86;
++    
+     // enable tearing-free
+     params->dbi.te_mode = LCM_DBI_TE_MODE_DISABLED;
+     params->dbi.te_edge_polarity		= LCM_POLARITY_RISING;
+diff --git a/alps/kernel-3.18/drivers/misc/mediatek/lcm/nt35512_dsi_vdo_wvga_zhongguangdian_shenchao/nt35512_dsi_vdo_wvga_zhongguangdian_shenchao.c b/alps/kernel-3.18/drivers/misc/mediatek/lcm/nt35512_dsi_vdo_wvga_zhongguangdian_shenchao/nt35512_dsi_vdo_wvga_zhongguangdian_shenchao.c
+index 12b2dc0..de51bcb 100755
+--- a/alps/kernel-3.18/drivers/misc/mediatek/lcm/nt35512_dsi_vdo_wvga_zhongguangdian_shenchao/nt35512_dsi_vdo_wvga_zhongguangdian_shenchao.c
++++ b/alps/kernel-3.18/drivers/misc/mediatek/lcm/nt35512_dsi_vdo_wvga_zhongguangdian_shenchao/nt35512_dsi_vdo_wvga_zhongguangdian_shenchao.c
+@@ -174,6 +174,9 @@ static void lcm_get_params(LCM_PARAMS *params)
+ 
+ 	params->width  = FRAME_WIDTH;
+ 	params->height = FRAME_HEIGHT;
++	
++	params->physical_width  = 52; //add by tianyunfei for BLU CTS Xdpi Ydpi
++  params->physical_height = 86;
+ 
+ 	// enable tearing-free
+ 		params->dbi.te_mode 			= LCM_DBI_TE_MODE_DISABLED;//LCM_DBI_TE_MODE_VSYNC_ONLY;
+-- 
+2.3.7
+
